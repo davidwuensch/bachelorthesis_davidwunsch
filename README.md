@@ -6,7 +6,7 @@ The folder "adversarial-training-box-scripts" contains the scripts that were use
 
 ## VERONA scripts
 
-The folder "verona-scripts" contains the scripts that were used with ADA-VERONA (https://github.com/ADA-research/VERONA). With this script the robustness distributions for my experiments were created. The scripts are heavily based on the example script for pytorch models, which can be found under the mentioned GitHub.
+The folder "verona-scripts" contains the scripts that were used with ADA-VERONA (https://github.com/ADA-research/VERONA). With this script the robustness distributions for my experiments were created. The scripts are heavily based on the example script for pytorch models, which can be found under the mentioned GitHub. Note that one possibly has to simplify the onnx models using onnxsim before using them in VERONA to avoid version conflicts.
 
 ## Plotting scripts
 The folder "plotting-scripts" contains the scripts that were used for creation of plots. The plotting script stem originally from ADA-VERONA and were modified to also plot the accuracies and add the median minimum adversarial perturbations and accuracies as text in the plot.  
