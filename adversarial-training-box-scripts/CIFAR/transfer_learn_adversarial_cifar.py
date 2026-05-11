@@ -88,7 +88,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Transfer Learning script with configurable network and experiment name')
     parser.add_argument('--source_model_path', type=str, default='"generated/BachelorThesisRuns/cnn_yang_big-pgd-training_21-10-2025+12_40/cnn_yang_big.pth"',
                        help='Source model path')
-    parser.add_argument('--experiment_name', type=str, default=None,
+    parser.add_argument('--experiment_name', type=str, default="DefaultExperiment",
                        help='Custom experiment name (default: {source_model_path}-transfer-learning)')
     parser.add_argument('--retraining_layers', type=int, default=1,
                        help='Indicate number of layers to retrain')

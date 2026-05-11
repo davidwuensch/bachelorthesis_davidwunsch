@@ -9,13 +9,11 @@ from optuna.trial import TrialState
 import argparse
 import importlib
 from adversarial_training_box.pipeline.early_stopper import EarlyStopper
-
 from adversarial_training_box.adversarial_attack.pgd_attack import PGDAttack
 from adversarial_training_box.adversarial_attack.fgsm_attack import FGSMAttack
 from adversarial_training_box.database.experiment_tracker import ExperimentTracker
 from adversarial_training_box.database.attribute_dict import AttributeDict
 from adversarial_training_box.pipeline.pipeline import Pipeline
-from adversarial_training_box.models.MNIST.mnist_relu_4_1024 import MNIST_RELU_4_1024
 from adversarial_training_box.pipeline.standard_training_module import StandardTrainingModule
 from adversarial_training_box.pipeline.standard_test_module import StandardTestModule
 from adversarial_training_box.adversarial_attack.auto_attack_module import AutoAttackModule
@@ -34,7 +32,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Training script with configurable network and experiment name')
     parser.add_argument('--network', type=str, default='MNIST_RELU_4_1024',
                        help='Network architecture name (default: MNIST_RELU_4_1024)')
-    parser.add_argument('--experiment_name', type=str, default=None,
+    parser.add_argument('--experiment_name', type=str, default="DefaultExperiment",
                        help='Custom experiment name (default: {network}-standard-training)')
     args = parser.parse_args()
 

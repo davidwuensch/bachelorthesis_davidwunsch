@@ -49,9 +49,9 @@ def get_network_class(network_name):
 if __name__ == "__main__":
     # Experiment configuration
     parser = argparse.ArgumentParser(description='Training script with configurable network and experiment name')
-    parser.add_argument('--network', type=str, default=None,
+    parser.add_argument('--network', type=str, default="None",
                        help='Network architecture name')
-    parser.add_argument('--experiment_name', type=str, default=None,
+    parser.add_argument('--experiment_name', type=str, default="DefaultExperiment",
                        help='Custom experiment name (default: {network}-standard-training)')
     parser.add_argument('--dataset', type=str, default='cifar10')
     args = parser.parse_args()

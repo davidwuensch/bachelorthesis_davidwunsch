@@ -34,7 +34,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Training script with configurable network and experiment name')
     parser.add_argument('--network', type=str, default='MNIST_RELU_4_1024',
                        help='Network architecture name (default: MNIST_RELU_4_1024)')
-    parser.add_argument('--experiment_name', type=str, default=None,
+    parser.add_argument('--experiment_name', type=str, default="DefaultExperiment",
                        help='Custom experiment name (default: {network}-standard-training)')
     args = parser.parse_args() 
 
